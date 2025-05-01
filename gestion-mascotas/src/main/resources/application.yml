@@ -1,0 +1,17 @@
+server:
+    port: 8081
+
+spring:
+  application:
+    name: gestion-mascotas
+
+  datasource:
+    url: jdbc:mysql://localhost:3306/petlovers_pets?useSSL=false&serverTimezone=UTC&createDatabaseIfNotExist=true&allowPublicKeyRetrieval=true
+    username: root
+    password: root
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+  jpa:
+    database-platform: org.hibernate.dialect.MySQLDialect
+    hibernate:
+      ddl-auto: update
