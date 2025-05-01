@@ -1,0 +1,1147 @@
+{
+	"info": {
+		"_postman_id": "49f8e8d9-9008-4cc9-9fac-b0bb7f8391f7",
+		"name": "PetLovers",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "37923251"
+	},
+	"item": [
+		{
+			"name": "Pet",
+			"item": [
+				{
+					"name": "Create Pet",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiJ9.eyJmdWxsTmFtZSI6IjEyMyIsInN1YiI6IjEyMyIsImlhdCI6MTc0NjA4MjIzMiwiZXhwIjoxNzQ2MTE4MjMyfQ.PA2zeRy8Q5keKttF-8L1Gcnazu4SzEp5UmJwFlVcv20",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"nombre\": \"Luna\",\r\n  \"especie\": \"Perro\",\r\n  \"raza\": \"Labrador\",\r\n  \"fechaNacimiento\": \"2020-05-15\",\r\n  \"idCliente\":1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8081/api/mascotas",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"mascotas"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Pets",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiJ9.eyJmdWxsTmFtZSI6IjEyMyIsInN1YiI6IjEyMyIsImlhdCI6MTc0NjA4MjIzMiwiZXhwIjoxNzQ2MTE4MjMyfQ.PA2zeRy8Q5keKttF-8L1Gcnazu4SzEp5UmJwFlVcv20",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8081/api/mascotas",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"mascotas"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Pet By Id",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiJ9.eyJmdWxsTmFtZSI6IjEyMyIsInN1YiI6IjEyMyIsImlhdCI6MTc0NjA4MjIzMiwiZXhwIjoxNzQ2MTE4MjMyfQ.PA2zeRy8Q5keKttF-8L1Gcnazu4SzEp5UmJwFlVcv20",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8081/api/mascotas/3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"mascotas",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Pet By Id",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiJ9.eyJmdWxsTmFtZSI6IjEyMyIsInN1YiI6IjEyMyIsImlhdCI6MTc0NjA4MjIzMiwiZXhwIjoxNzQ2MTE4MjMyfQ.PA2zeRy8Q5keKttF-8L1Gcnazu4SzEp5UmJwFlVcv20",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8081/api/mascotas/3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"mascotas",
+								"3"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "History",
+			"item": [
+				{
+					"name": "Create History",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiJ9.eyJmdWxsTmFtZSI6IjEyMyIsInN1YiI6IjEyMyIsImlhdCI6MTc0NjA4MjIzMiwiZXhwIjoxNzQ2MTE4MjMyfQ.PA2zeRy8Q5keKttF-8L1Gcnazu4SzEp5UmJwFlVcv20",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"idMascota\":1,\r\n  \"fecha\":\"2024-06-01\",\r\n  \"tipoAtencion\":\"Vacunación\",\r\n  \"descripcion\":\"Aplicación de vacuna antirrábica.\",\r\n  \"veterinario\":\"Dra. Ruiz\",\r\n  \"observaciones\":\"Ninguna\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8081/api/historia-clinica",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"historia-clinica"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get History By PetId",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiJ9.eyJmdWxsTmFtZSI6IjEyMyIsInN1YiI6IjEyMyIsImlhdCI6MTc0NjA4MjIzMiwiZXhwIjoxNzQ2MTE4MjMyfQ.PA2zeRy8Q5keKttF-8L1Gcnazu4SzEp5UmJwFlVcv20",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8081/api/historia-clinica/mascota/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"historia-clinica",
+								"mascota",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get History By Id",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiJ9.eyJmdWxsTmFtZSI6IjEyMyIsInN1YiI6IjEyMyIsImlhdCI6MTc0NjA4MjIzMiwiZXhwIjoxNzQ2MTE4MjMyfQ.PA2zeRy8Q5keKttF-8L1Gcnazu4SzEp5UmJwFlVcv20",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8081/api/historia-clinica/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"historia-clinica",
+								"1"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": null,
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Product",
+			"item": [
+				{
+					"name": "Create Product",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiJ9.eyJmdWxsTmFtZSI6IjEyMyIsInN1YiI6IjEyMyIsImlhdCI6MTc0NjA4MjIzMiwiZXhwIjoxNzQ2MTE4MjMyfQ.PA2zeRy8Q5keKttF-8L1Gcnazu4SzEp5UmJwFlVcv20",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"nombre\":\"Alimento para perro\",\r\n  \"descripcion\":\"Bolsa de 10kg de alimento premium\",\r\n  \"precio\":89.99,\r\n  \"categoria\":\"Alimentos\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8082/api/productos",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"api",
+								"productos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Products",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiJ9.eyJmdWxsTmFtZSI6IjEyMyIsInN1YiI6IjEyMyIsImlhdCI6MTc0NjA4MjIzMiwiZXhwIjoxNzQ2MTE4MjMyfQ.PA2zeRy8Q5keKttF-8L1Gcnazu4SzEp5UmJwFlVcv20",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8082/api/productos",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"api",
+								"productos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Pet By Id",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiJ9.eyJmdWxsTmFtZSI6IjEyMyIsInN1YiI6IjEyMyIsImlhdCI6MTc0NjA4MjIzMiwiZXhwIjoxNzQ2MTE4MjMyfQ.PA2zeRy8Q5keKttF-8L1Gcnazu4SzEp5UmJwFlVcv20",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8082/api/productos/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"api",
+								"productos",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Pet By Id",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiJ9.eyJmdWxsTmFtZSI6IjEyMyIsInN1YiI6IjEyMyIsImlhdCI6MTc0NjA4MjIzMiwiZXhwIjoxNzQ2MTE4MjMyfQ.PA2zeRy8Q5keKttF-8L1Gcnazu4SzEp5UmJwFlVcv20",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8082/api/productos/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"api",
+								"productos",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Stock",
+			"item": [
+				{
+					"name": "Create Stock",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiJ9.eyJmdWxsTmFtZSI6IjEyMyIsInN1YiI6IjEyMyIsImlhdCI6MTc0NjA4MjIzMiwiZXhwIjoxNzQ2MTE4MjMyfQ.PA2zeRy8Q5keKttF-8L1Gcnazu4SzEp5UmJwFlVcv20",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"idProducto\":4,\r\n  \"cantidad\":3,\r\n  \"umbralAlerta\":5\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8082/api/stock",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"api",
+								"stock"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Stock",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiJ9.eyJmdWxsTmFtZSI6IjEyMyIsInN1YiI6IjEyMyIsImlhdCI6MTc0NjA4MjIzMiwiZXhwIjoxNzQ2MTE4MjMyfQ.PA2zeRy8Q5keKttF-8L1Gcnazu4SzEp5UmJwFlVcv20",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8082/api/stock",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"api",
+								"stock"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Stock By Id",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiJ9.eyJmdWxsTmFtZSI6IjEyMyIsInN1YiI6IjEyMyIsImlhdCI6MTc0NjA4MjIzMiwiZXhwIjoxNzQ2MTE4MjMyfQ.PA2zeRy8Q5keKttF-8L1Gcnazu4SzEp5UmJwFlVcv20",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8082/api/stock/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"api",
+								"stock",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Alert Stock By Id",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiJ9.eyJmdWxsTmFtZSI6IjEyMyIsInN1YiI6IjEyMyIsImlhdCI6MTc0NjA4MjIzMiwiZXhwIjoxNzQ2MTE4MjMyfQ.PA2zeRy8Q5keKttF-8L1Gcnazu4SzEp5UmJwFlVcv20",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8082/api/stock/alerta/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"api",
+								"stock",
+								"alerta",
+								"2"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Customer",
+			"item": [
+				{
+					"name": "GenerateJWT",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8083/customer/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8083",
+							"path": [
+								"customer",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Customer",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiJ9.eyJmdWxsTmFtZSI6IjEyMyIsInN1YiI6IjEyMyIsImlhdCI6MTc0NjA4NDI3OCwiZXhwIjoxNzQ2MTIwMjc4fQ.bWFAWHgDscfps0EnB-_B-Ui3SnUp509fMSMSJ9VMkm4",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"fullName\": \"Juan Pérez\",\r\n  \"email\": \"juanperez2@example.com\",\r\n  \"phone\": \"3001234567\",\r\n  \"address\": \"Calle 123 #45-67, Bogotá\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8083/customer",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8083",
+							"path": [
+								"customer"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Customers",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiJ9.eyJmdWxsTmFtZSI6IjEyMyIsInN1YiI6IjEyMyIsImlhdCI6MTc0NjA2OTIzMywiZXhwIjoxNzQ2MTA1MjMzfQ.lQEjxDOn2LQVv1MdYsEenZG9sJNLPGtdVDWanP-7-bc",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8083/customer",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8083",
+							"path": [
+								"customer"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Customer By Id",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiJ9.eyJmdWxsTmFtZSI6IjEyMyIsInN1YiI6IjEyMyIsImlhdCI6MTc0NjA2OTIzMywiZXhwIjoxNzQ2MTA1MjMzfQ.lQEjxDOn2LQVv1MdYsEenZG9sJNLPGtdVDWanP-7-bc",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8083/customer/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8083",
+							"path": [
+								"customer",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Appointment",
+			"item": [
+				{
+					"name": "Create Appointment",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiJ9.eyJmdWxsTmFtZSI6IjEyMyIsInN1YiI6IjEyMyIsImlhdCI6MTc0NjA2OTIzMywiZXhwIjoxNzQ2MTA1MjMzfQ.lQEjxDOn2LQVv1MdYsEenZG9sJNLPGtdVDWanP-7-bc",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"customerId\": 1,\r\n  \"petId\": 1,\r\n  \"dateTime\": \"2025-05-02T14:30:00\",\r\n  \"serviceType\": \"vaccination\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8083/appointments",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8083",
+							"path": [
+								"appointments"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Appointment",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiJ9.eyJmdWxsTmFtZSI6IjEyMyIsInN1YiI6IjEyMyIsImlhdCI6MTc0NjA2OTIzMywiZXhwIjoxNzQ2MTA1MjMzfQ.lQEjxDOn2LQVv1MdYsEenZG9sJNLPGtdVDWanP-7-bc",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"dateTime\": \"2025-05-05T09:00:00\",\r\n  \"serviceType\": \"grooming\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8083/appointments/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8083",
+							"path": [
+								"appointments",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Appointment",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiJ9.eyJmdWxsTmFtZSI6IjEyMyIsInN1YiI6IjEyMyIsImlhdCI6MTc0NjA2OTIzMywiZXhwIjoxNzQ2MTA1MjMzfQ.lQEjxDOn2LQVv1MdYsEenZG9sJNLPGtdVDWanP-7-bc",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8083/appointments",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8083",
+							"path": [
+								"appointments"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Appointment By Id",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiJ9.eyJmdWxsTmFtZSI6IjEyMyIsInN1YiI6IjEyMyIsImlhdCI6MTc0NjA2OTIzMywiZXhwIjoxNzQ2MTA1MjMzfQ.lQEjxDOn2LQVv1MdYsEenZG9sJNLPGtdVDWanP-7-bc",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8083/appointments/3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8083",
+							"path": [
+								"appointments",
+								"3"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Payment",
+			"item": [
+				{
+					"name": "Create Payment",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiJ9.eyJmdWxsTmFtZSI6IjEyMyIsInN1YiI6IjEyMyIsImlhdCI6MTc0NjA4NDI3OCwiZXhwIjoxNzQ2MTIwMjc4fQ.bWFAWHgDscfps0EnB-_B-Ui3SnUp509fMSMSJ9VMkm4",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"billId\": 1,\r\n  \"paymentDate\": \"2025-05-02\",\r\n  \"paymentMethod\": \"card\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8084/payments",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8084",
+							"path": [
+								"payments"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Payments",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiJ9.eyJmdWxsTmFtZSI6IjEyMyIsInN1YiI6IjEyMyIsImlhdCI6MTc0NjA3NzcwMSwiZXhwIjoxNzQ2MTEzNzAxfQ.Pm8EA9H-rIQp5gFV-8AgUzwWnyHcQxjvO8SPblG6pFI",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8084/payments",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8084",
+							"path": [
+								"payments"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Payment By Id",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiJ9.eyJmdWxsTmFtZSI6IjEyMyIsInN1YiI6IjEyMyIsImlhdCI6MTc0NjA3NzcwMSwiZXhwIjoxNzQ2MTEzNzAxfQ.Pm8EA9H-rIQp5gFV-8AgUzwWnyHcQxjvO8SPblG6pFI",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8084/payments/4",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8084",
+							"path": [
+								"payments",
+								"4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Payment By Id Copy",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiJ9.eyJmdWxsTmFtZSI6IjEyMyIsInN1YiI6IjEyMyIsImlhdCI6MTc0NjA3NzcwMSwiZXhwIjoxNzQ2MTEzNzAxfQ.Pm8EA9H-rIQp5gFV-8AgUzwWnyHcQxjvO8SPblG6pFI",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8084/payments/4",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8084",
+							"path": [
+								"payments",
+								"4"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Bill",
+			"item": [
+				{
+					"name": "Create Bill",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiJ9.eyJmdWxsTmFtZSI6IjEyMyIsInN1YiI6IjEyMyIsImlhdCI6MTc0NjA3NzcwMSwiZXhwIjoxNzQ2MTEzNzAxfQ.Pm8EA9H-rIQp5gFV-8AgUzwWnyHcQxjvO8SPblG6pFI",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"customerId\": 1,\r\n  \"issuedDate\": \"2025-05-01\",\r\n  \"total\": \"150000.00\",\r\n  \"description\": \"Consulta general + vacuna anual\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8084/bills",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8084",
+							"path": [
+								"bills"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Biils",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiJ9.eyJmdWxsTmFtZSI6IjEyMyIsInN1YiI6IjEyMyIsImlhdCI6MTc0NjA3NzcwMSwiZXhwIjoxNzQ2MTEzNzAxfQ.Pm8EA9H-rIQp5gFV-8AgUzwWnyHcQxjvO8SPblG6pFI",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8084/bills",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8084",
+							"path": [
+								"bills"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Bill By Id",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiJ9.eyJmdWxsTmFtZSI6IjEyMyIsInN1YiI6IjEyMyIsImlhdCI6MTc0NjA3NzcwMSwiZXhwIjoxNzQ2MTEzNzAxfQ.Pm8EA9H-rIQp5gFV-8AgUzwWnyHcQxjvO8SPblG6pFI",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8084/bills/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8084",
+							"path": [
+								"bills",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Bill By Id",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiJ9.eyJmdWxsTmFtZSI6IjEyMyIsInN1YiI6IjEyMyIsImlhdCI6MTc0NjA3NzcwMSwiZXhwIjoxNzQ2MTEzNzAxfQ.Pm8EA9H-rIQp5gFV-8AgUzwWnyHcQxjvO8SPblG6pFI",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8084/bills/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8084",
+							"path": [
+								"bills",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
